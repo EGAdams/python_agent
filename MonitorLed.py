@@ -1,0 +1,25 @@
+import MonitorLedClassObject from "./MonitorLedClassObject.js";
+/** @class MonitorLed */
+class MonitorLed {
+    classObject;
+    ledText;
+    RUNNING_COLOR;
+    PASS_COLOR;
+    FAIL_COLOR;
+    constructor() {
+        this.classObject = new MonitorLedClassObject();
+        this.ledText = "ready.";
+        this.RUNNING_COLOR = "lightyellow";
+        this.PASS_COLOR = "lightgreen";
+        this.FAIL_COLOR = "#fb6666"; // lightred is not understood by CSS.  Whaaa... ??
+    }
+    setFail() {
+        this.setLedBackgroundColor(this.FAIL_COLOR);
+        this.setLedTextColor("white");
+    }
+    setLedBackgroundColor(newColor) { this.classObject.background_color = newColor; }
+    setLedTextColor(newColor) { this.classObject.color = newColor; }
+    setLedText(newText) { this.ledText = newText; }
+}
+export default MonitorLed;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW9uaXRvckxlZC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9saWIvTW9uaXRvckxlZC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLHFCQUFxQixNQUFNLDRCQUE0QixDQUFDO0FBQy9ELHdCQUF3QjtBQUV4QixNQUFNLFVBQVU7SUFDWixXQUFXLENBQTBCO0lBQ3JDLE9BQU8sQ0FBZTtJQUN0QixhQUFhLENBQVM7SUFDdEIsVUFBVSxDQUFZO0lBQ3RCLFVBQVUsQ0FBWTtJQUN0QjtRQUNJLElBQUksQ0FBQyxXQUFXLEdBQUssSUFBSSxxQkFBcUIsRUFBRSxDQUFDO1FBQ2pELElBQUksQ0FBQyxPQUFPLEdBQVMsUUFBUSxDQUFDO1FBQzlCLElBQUksQ0FBQyxhQUFhLEdBQUcsYUFBYSxDQUFDO1FBQ25DLElBQUksQ0FBQyxVQUFVLEdBQU0sWUFBWSxDQUFDO1FBQ2xDLElBQUksQ0FBQyxVQUFVLEdBQU0sU0FBUyxDQUFDLENBQUMsa0RBQWtEO0lBQ3RGLENBQUM7SUFFRCxPQUFPO1FBQ0gsSUFBSSxDQUFDLHFCQUFxQixDQUFFLElBQUksQ0FBQyxVQUFVLENBQUUsQ0FBQztRQUM5QyxJQUFJLENBQUMsZUFBZSxDQUFRLE9BQU8sQ0FBVSxDQUFDO0lBQUMsQ0FBQztJQUVwRCxxQkFBcUIsQ0FBRSxRQUFRLElBQUssSUFBSSxDQUFDLFdBQVcsQ0FBQyxnQkFBZ0IsR0FBRyxRQUFRLENBQUMsQ0FBQyxDQUFDO0lBQ25GLGVBQWUsQ0FBUSxRQUFRLElBQUssSUFBSSxDQUFDLFdBQVcsQ0FBQyxLQUFLLEdBQWMsUUFBUSxDQUFDLENBQUMsQ0FBQztJQUNuRixVQUFVLENBQWEsT0FBTyxJQUFNLElBQUksQ0FBQyxPQUFPLEdBQXdCLE9BQU8sQ0FBRSxDQUFDLENBQUM7Q0FDdEY7QUFFRCxlQUFlLFVBQVUsQ0FBQyJ9
